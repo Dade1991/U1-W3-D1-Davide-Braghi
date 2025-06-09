@@ -12,11 +12,11 @@
 
 // glue(`Ciao`, `Stefano`)
 
-const textWord = function (s1, s2) {
-  let result = s1.splice(0, 3, 0) + s2
+const valori = function (c1, c2) {
+  const result = c1 + c2
 }
 
-textWord(`Ciao`, `Stefano`)
+valori(2, 2)
 
 console.log(result)
 
@@ -209,11 +209,11 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
-movies.forEach((yearValue, i) => {
-  if (yearValue === Math.min(movies)) {
-    console.log(`ok`, i)
-  }
-})
+// movies.forEach((yearValue, i) => {
+//   if (yearValue === Math.min(movies)) {
+//     console.log(`ok`, i)
+//   }
+// })
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
