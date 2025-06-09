@@ -3,54 +3,101 @@
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
 
-// const glue = function (s1, s2) {
-//   const result = s1.splice(0, 2) + s2.splice(-3)
+// const combineString = function (str1, str2) {
+//   let result = str1.slice(0, 2) + str2.slice(-3)
+//   result = result.toUpperCase()
 //   console.log(result)
-//   // result = result.toUpperCase()
-//   // console.log(result)
 // }
+// combineString(`Ciao`, `Stefano`)
 
-// glue(`Ciao`, `Stefano`)
+// const mixedText = function (tx1, tx2) {
+//   let result = tx1.slice(0, 2) + tx2.slice(tx2.length - 3)
+//   console.log(result)
+// }
+// mixedText(`Stefano`, `Caio`)
 
-const valori = function (c1, c2) {
-  const result = c1 + c2
+const mixedTest = (aa, bb) => {
+  let result2 = aa + bb
+  // return result2
+  console.log(result2)
 }
+mixedTest(`AABBCC`, `DDEEFF`)
 
-valori(2, 2)
-
-console.log(result)
+// mixedTest
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 
+// const createArray = function () {
+//   const array = []
+//   for (let i = 0; i < 10; i++) {
+//     const randomNumber = Math.floor(Math.random() * 101)
+//     array.push(randomNumber)
+//   }
+//   return array
+// }
+
+// const x = createArray()
+// console.log(x)
+
+const box10item = function () {
+  const values10it = []
+  for (i = 0; i < 10; i++) {
+    values10it.push(Math.floor(Math.random() * 101))
+  }
+  console.log(values10it)
+}
+box10item()
+
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
-const values = [3, 8, 11, 27, 30, 33, 46, 53, 58, 62, 70.4, 83, 88, 93, 96, 100]
+const valuesParameter = [
+  3, 8, 11, 27, 30, 33, 46, 53, 58, 62, 70.4, 83, 88, 93, 96, 100,
+]
 
-const evenValues = values.filter((evenNumb) => {
-  if (evenNumb % 2) {
-    return false
-  } else {
+// const evenValues = values.filter((evenNumb) => {
+//   if (evenNumb % 2 === 0) {
+//     return true
+//   } else {
+//     return false
+//   }
+// })
+
+// console.log(`numeri pari: ` + evenValues)
+
+const evenSelector = valuesParameter.filter((evenNumber) => {
+  if (evenNumber % 2 === 0) {
     return true
+  } else {
+    return false
   }
 })
-
-console.log(evenValues)
+console.log(evenSelector)
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
-const array = [3, 6, 12, 45, 78, 94]
+// const array = [3, 6, 12, 45, 78, 94]
 
-array.forEach(function (sum) {
-  if (sum !== ``) {
-    console.log(sum + 2)
-  }
-})
+// array.forEach(function (sum) {
+//   if (sum !== ``) {
+//     console.log(sum + 2)
+//   }
+// })
+
+// const addNumbers = function () {
+//   let sum = 0
+//   values.forEach((n) => {
+//     sum += n
+//   })
+//   return sum
+// }
+
+// console.log(`Ex.4: ` + addNumbers())
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -88,6 +135,17 @@ console.log(
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+const arrayOdd = function () {
+  let sumOdd = []
+  for (i = 1; i < 100; i++) {
+    if (i % 2 !== 0) {
+      sumOdd.push(i)
+    }
+  }
+  console.log(sumOdd)
+}
+arrayOdd()
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -209,11 +267,11 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
-// movies.forEach((yearValue, i) => {
-//   if (yearValue === Math.min(movies)) {
-//     console.log(`ok`, i)
-//   }
-// })
+movies.forEach((yearValue) => {
+  if (yearValue === Math.min(movies)) {
+    console.log(`ok`)
+  }
+})
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
